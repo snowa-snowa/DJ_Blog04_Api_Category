@@ -34,7 +34,6 @@ def categories(request):
     return render(request, "blog/categories.html", {"categories": category})
 
 
-
 def blogs_comments(request, slug):
     post = BlogPost.objects.filter(slug=slug).first()
     comments = Comment.objects.filter(blog=post)
